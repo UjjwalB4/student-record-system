@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: '/api' });
+const api = axios.create({
+  baseURL: 'http://16.178.42.93:5000/api'
+});
 
 export const getStatus   = ()            => api.get('/status');
 export const getStudents = (params = {}) => api.get('/students', { params });
